@@ -80,7 +80,7 @@ class AmazonScraper:
             print(f"Error reading ASIN file: {e}")
             return []
 
-    def parse_multiple_products(self, asins, save_path=r"D:/FARMINA/scraper/amazon_products.xlsx"):
+    def parse_multiple_products(self, asins, save_path=r"PATH FOR EXCEL FILE"):    # ADD THE PATH FOR EXCEL FILE
         """Extract product details for multiple ASINs and save to an Excel file"""
         products = []
         for asin in asins:
@@ -105,7 +105,7 @@ class AmazonScraper:
 # Usage Example
 if __name__ == "__main__":
     scraper = AmazonScraper()
-    file_path = r"D:\FARMINA\scraper\B008YQOXNW.txt"  # Use raw string for file path
+    file_path = r"PATH OF TEXT FILE CONTAINING THE ASIN"  # Use raw string for file path
     asin_list = scraper.parse_asins_from_file(file_path)
     
     if asin_list:
